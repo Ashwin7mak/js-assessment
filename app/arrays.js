@@ -1,59 +1,62 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.arraysAnswers = {
-  indexOf: function(arr, item) {
+    indexOf: function(arr, item) {
+        if (Array.prototype.indexOf) { return arr.indexOf(item); }
+    },
 
-  },
+    sum: function(arr) {
+        let sum = arr.reduce((a, b) => {
+            return a + b;
+        }, 0);
+        return sum;
+    },
 
-  sum: function(arr) {
+    remove: function(arr, item) {
+        return arr.filter((e) => e != item);
+    },
 
-  },
+    removeWithoutCopy: function(arr, item) {
 
-  remove: function(arr, item) {
+    },
 
-  },
+    append: function(arr, item) {
+        return arr.push(item);
+    },
 
-  removeWithoutCopy: function(arr, item) {
+    truncate: function(arr) {
+        return arr.pop();
+    },
 
-  },
+    prepend: function(arr, item) {
 
-  append: function(arr, item) {
+    },
 
-  },
+    curtail: function(arr) {
 
-  truncate: function(arr) {
+    },
 
-  },
+    concat: function(arr1, arr2) {
 
-  prepend: function(arr, item) {
+    },
 
-  },
+    insert: function(arr, item, index) {
 
-  curtail: function(arr) {
+    },
 
-  },
+    count: function(arr, item) {
 
-  concat: function(arr1, arr2) {
+    },
 
-  },
+    duplicates: function(arr) {
 
-  insert: function(arr, item, index) {
+    },
 
-  },
+    square: function(arr) {
 
-  count: function(arr, item) {
+    },
 
-  },
+    findAllOccurrences: function(arr, target) {
 
-  duplicates: function(arr) {
-
-  },
-
-  square: function(arr) {
-
-  },
-
-  findAllOccurrences: function(arr, target) {
-
-  }
+    }
 };
